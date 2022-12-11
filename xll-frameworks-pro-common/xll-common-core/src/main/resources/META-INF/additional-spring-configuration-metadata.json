@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "retry.enabled",
+      "type": "java.lang.String",
+      "description": "是否开启失败重试."
+    }
+  ]
+}
