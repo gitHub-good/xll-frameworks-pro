@@ -14,7 +14,10 @@
     <modules>
         <module>xll-system/xll-system-api</module>
         <module>xll-system/xll-system-srv</module>
-        <module>xll-system/xll-system-data</module>
+        <module>xll-system/xll-system-repository</module>
+        <module>xll-system/xll-system-infrastructure</module>
+        <module>xll-system/xll-system-application</module>
+        <module>xll-system/xll-system-domain</module>
     </modules>
     <packaging>pom</packaging>
 

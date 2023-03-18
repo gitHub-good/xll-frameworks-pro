@@ -7,11 +7,12 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
  * 功能描述: <br>
- * <p>
- * 〈启动〉
- * </p>
- * @Author: xuliangliang
- * @Date: 2022/10/15 20:19
+ * <P>
+ * @Description web启动
+ * </P>
+ * @author liangliang.xu
+ * @version 1.0.0
+ * @createTime 2023/3/18 20:53
  */
 @Slf4j
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
