@@ -10,16 +10,38 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>xll-common-utils</artifactId>
+    <groupId>com.xll.frameworks.pro.common.utils</groupId>
+    <description>工具类</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <hutool.version>5.8.15</hutool.version>
+        <fastjson2.version>2.0.25</fastjson2.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencies>
-
+        <!--工具类-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <!--google工具类-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!--fastjson2-->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
