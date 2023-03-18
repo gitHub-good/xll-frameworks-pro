@@ -19,5 +19,12 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <dependencies>
+        <!-- 领域模型 -->
+        <dependency>
+            <groupId>com.xll.frameworks.pro.system.domain</groupId>
+            <artifactId>xll-system-domain</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>

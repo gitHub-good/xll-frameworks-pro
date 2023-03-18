@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xll-frameworks-pro-web</artifactId>
+    <artifactId>xll-frameworks-pro-sweb</artifactId>
     <description>web服务</description>
 
     <properties>

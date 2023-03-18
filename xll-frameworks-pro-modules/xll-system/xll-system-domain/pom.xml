@@ -20,4 +20,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <!--基础设施-->
+        <dependency>
+            <groupId>com.xll.frameworks.pro.system.infrastructure</groupId>
+            <artifactId>xll-system-infrastructure</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>

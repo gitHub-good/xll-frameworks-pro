@@ -11,7 +11,7 @@
     <description>基础架构练习项目</description>
 
     <modules>
-        <module>xll-frameworks-pro-web</module>
+        <module>xll-frameworks-pro-sweb</module>
         <module>xll-frameworks-pro-modules</module>
         <module>xll-frameworks-pro-common</module>
     </modules>
