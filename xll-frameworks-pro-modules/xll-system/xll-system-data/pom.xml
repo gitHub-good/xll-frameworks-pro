@@ -13,17 +13,12 @@
     <artifactId>xll-system-data</artifactId>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- 缓存组件 -->
-<!--        <dependency>-->
-<!--            <artifactId>xll-common-cache</artifactId>-->
-<!--            <groupId>com.xll.frameworks.pro.common.cache</groupId>-->
-<!--        </dependency>-->
         <dependency>
             <artifactId>xll-common-core</artifactId>
             <groupId>com.xll.frameworks.pro.common.core</groupId>
@@ -52,6 +47,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
         </dependency>
     </dependencies>
 </project>

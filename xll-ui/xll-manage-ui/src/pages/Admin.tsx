@@ -4,7 +4,7 @@ import { useIntl } from '@umijs/max';
 import { Alert, Card, Typography } from 'antd';
 import React from 'react';
 
-const Admin: React.FC = () => {
+const Test: React.FC = () => {
   const intl = useIntl();
   return (
     <PageContainer
@@ -42,4 +42,4 @@ const Admin: React.FC = () => {
   );
 };
 
-export default Admin;
+export default Test;
