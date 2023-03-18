@@ -5,6 +5,9 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.xll.frameworks.pro.common.core.PO;
 import lombok.Data;
+
+import java.util.Date;
+
 /**
  * 功能描述: <br>
  * <P>
@@ -16,7 +19,7 @@ import lombok.Data;
  */
 @Data
 @TableName("SysRole")
-public class SysRolePO extends PO {
+public class SysRolePO implements PO {
     @TableId(type = IdType.AUTO)
     private Long id;
     /**
@@ -43,4 +46,21 @@ public class SysRolePO extends PO {
      * 删除标志（0:存在 1:删除)
      */
     private Integer delFlag;
+    /**
+     * 创建人
+     */
+    private String createBy;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+    /**
+     * 更新人
+     */
+    private String updateBy;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 }

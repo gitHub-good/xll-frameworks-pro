@@ -19,7 +19,7 @@ import java.util.Date;
  */
 @Data
 @TableName("SysUser")
-public class SysUserPO extends PO {
+public class SysUserPO implements PO {
     @TableId(type = IdType.AUTO)
     private Long id;
     /**
@@ -54,4 +54,21 @@ public class SysUserPO extends PO {
      * 删除标志（0:存在 1:删除)
      */
     private Integer delFlag;
+    /**
+     * 创建人
+     */
+    private String createBy;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+    /**
+     * 更新人
+     */
+    private String updateBy;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 }

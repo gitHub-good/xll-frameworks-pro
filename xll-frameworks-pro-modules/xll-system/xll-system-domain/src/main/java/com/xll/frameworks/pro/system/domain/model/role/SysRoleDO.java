@@ -1,9 +1,6 @@
-package com.xll.frameworks.pro.system.repository.po;
+package com.xll.frameworks.pro.system.domain.model.role;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.xll.frameworks.pro.common.core.PO;
+import com.xll.frameworks.pro.common.core.DO;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,31 +8,33 @@ import java.util.Date;
 /**
  * 功能描述: <br>
  * <P>
- * @Description 部门信息
+ * @Description 角色领域对象
  * </P>
  * @author liangliang.xu
  * @version 1.0.0
- * @createTime 2023/3/18 22:00
+ * @createTime 2023/3/18 23:14
  */
 @Data
-@TableName("SysDept")
-public class SysDeptPO implements PO {
-    @TableId(type = IdType.AUTO)
+public class SysRoleDO implements DO {
     private Long id;
     /**
-     * 部门父类ID
+     * 角色名称
      */
-    private Long parentId;
+    private String roleName;
     /**
-     * 部门名称
+     * 角色权限key
      */
-    private String deptName;
+    private String roleKey;
     /**
-     * 显示顺序
+     * 角色排序
      */
     private Integer sort;
     /**
-     * 部门状态（0:停用 1:正常)
+     * 数据范围（1：所有数据权限；2：自定义数据权限；3：本部门数据权限；4：本部门及以下数据权限；5：仅本人数据权限）
+     */
+    private Integer dataScope;
+    /**
+     * 角色状态（0:停用 1:正常)
      */
     private Integer status;
     /**

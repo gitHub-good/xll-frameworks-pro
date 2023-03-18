@@ -1,9 +1,6 @@
-package com.xll.frameworks.pro.system.repository.po;
+package com.xll.frameworks.pro.system.domain.model.dept;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.xll.frameworks.pro.common.core.PO;
+import com.xll.frameworks.pro.common.core.DO;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,16 +8,14 @@ import java.util.Date;
 /**
  * 功能描述: <br>
  * <P>
- * @Description 部门信息
+ * @Description 部门领域对象
  * </P>
  * @author liangliang.xu
  * @version 1.0.0
- * @createTime 2023/3/18 22:00
+ * @createTime 2023/3/18 23:13
  */
 @Data
-@TableName("SysDept")
-public class SysDeptPO implements PO {
-    @TableId(type = IdType.AUTO)
+public class SysDeptDO implements DO {
     private Long id;
     /**
      * 部门父类ID

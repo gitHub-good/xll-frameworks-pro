@@ -9,4 +9,14 @@ package com.xll.frameworks.pro.common.core.constant;
  * @createTime 2023/3/18 21:10
  */
 public interface Constant {
+
+    /**
+     * 成功标记
+     */
+    Integer SUCCESS = 200;
+
+    /**
+     * 失败标记
+     */
+    Integer FAIL = 500;
 }
