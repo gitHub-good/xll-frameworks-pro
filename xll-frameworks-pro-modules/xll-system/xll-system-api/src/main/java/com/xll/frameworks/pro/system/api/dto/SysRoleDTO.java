@@ -13,4 +13,27 @@ import lombok.Data;
  */
 @Data
 public class SysRoleDTO implements DTO {
+    /**
+     * 角色ID
+     */
+    private Long id;
+
+    /**
+     * 角色名称
+     */
+    private String roleName;
+
+    /**
+     * 角色权限
+     */
+    private String roleKey;
+
+    /**
+     * 角色排序
+     */
+    private Integer sort;
+    /**
+     * 数据范围
+     */
+    private String dataScope;
 }

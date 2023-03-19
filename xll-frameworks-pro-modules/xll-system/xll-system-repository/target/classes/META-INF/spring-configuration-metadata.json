@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xll.frameworks.pro.system.config.DataSourceConfig",
+      "sourceMethod": "systemDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

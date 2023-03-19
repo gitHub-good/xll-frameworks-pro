@@ -8,6 +8,5 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface SysRoleWebAssembler {
     SysRoleWebAssembler INSTANCE = Mappers.getMapper(SysRoleWebAssembler.class);
-
     SysRoleDTO voToDto(SysRoleRequestVO sysRoleRequestVO);
 }

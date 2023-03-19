@@ -1,8 +1,10 @@
 package com.xll.frameworks.pro.system.interfaces;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 功能描述: <br>
@@ -14,6 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @createTime 2023/3/18 20:37
  */
 @Slf4j
+@EnableDiscoveryClient
+@EnableDubbo
 @SpringBootApplication
 public class FrameworksProSystemApplication {
 

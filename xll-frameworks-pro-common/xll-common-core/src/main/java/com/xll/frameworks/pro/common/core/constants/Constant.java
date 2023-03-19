@@ -1,4 +1,4 @@
-package com.xll.frameworks.pro.common.core.constant;
+package com.xll.frameworks.pro.common.core.constants;
 /**
  * 功能描述: <br>
  * <P>

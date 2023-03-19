@@ -1,13 +1,12 @@
 package com.xll.frameworks.pro.system;
 
-import com.xll.frameworks.pro.system.config.MybatisPlusConfig;
-import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
+@AutoConfiguration
 @Configuration
-@Import(value = {MybatisPlusConfig.class})
-@MapperScan(basePackages = "com.xll.frameworks.pro.system.repository")
+@ComponentScan(basePackages = {"com.xll.frameworks.pro.system"})
 public class SystemRepositoryAutoConfiguration {
 
 }

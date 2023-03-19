@@ -1,0 +1,62 @@
+server:
+  port: 8001
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: xll-system-srv
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+      config:
+        discovery:
+          enabled: true
+#      config:
+#        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+#        file-extension: yml
+#        shared-configs:
+#          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+
+  #数据库配置
+  datasource:
+    username: root
+    password: xll.123
+    url: jdbc:mysql://127.0.0.1:3306/frame-pro?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# Dubbo Protocol
+dubbo:
+  protocol:
+    name: dubbo
+    ## Random port
+    port: -1
+
+  ## Dubbo Registry
+  registry:
+    address: nacos://127.0.0.1:8848/?username=nacos&password=nacos
+
+## DemoService version
+demo:
+  service:
+    version: 1.0.0
+
+# feign 配置
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true

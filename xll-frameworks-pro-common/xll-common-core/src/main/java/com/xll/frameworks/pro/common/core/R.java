@@ -1,6 +1,6 @@
 package com.xll.frameworks.pro.common.core;
 
-import com.xll.frameworks.pro.common.core.constant.Constant;
+import com.xll.frameworks.pro.common.core.constants.Constant;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -36,38 +36,38 @@ public class R<T> implements Serializable {
     private T data;
 
     public static <T> R<T> ok() {
-        return result(null, SUCCESS, null);
+        return instance(null, SUCCESS, null);
     }
 
     public static <T> R<T> ok(T data) {
-        return result(data, SUCCESS, null);
+        return instance(data, SUCCESS, null);
     }
 
     public static <T> R<T> ok(T data, String msg) {
-        return result(data, SUCCESS, msg);
+        return instance(data, SUCCESS, msg);
     }
 
     public static <T> R<T> fail() {
-        return result(null, FAIL, null);
+        return instance(null, FAIL, null);
     }
 
     public static <T> R<T> fail(String msg) {
-        return result(null, FAIL, msg);
+        return instance(null, FAIL, msg);
     }
 
     public static <T> R<T> fail(T data) {
-        return result(data, FAIL, null);
+        return instance(data, FAIL, null);
     }
 
     public static <T> R<T> fail(T data, String msg) {
-        return result(data, FAIL, msg);
+        return instance(data, FAIL, msg);
     }
 
     public static <T> R<T> fail(int code, String msg) {
-        return result(null, code, msg);
+        return instance(null, code, msg);
     }
 
-    private static <T> R<T> result(T data, int code, String msg) {
+    private static <T> R<T> instance(T data, int code, String msg) {
         R<T> apiResult = new R<>();
         apiResult.setCode(code);
         apiResult.setData(data);

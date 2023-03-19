@@ -1,5 +1,10 @@
 package com.xll.frameworks.pro.system.domain.model.user;
 
+import com.xll.frameworks.pro.common.core.exception.DomainException;
+import com.xll.frameworks.pro.system.domain.assembler.SysUserDomainAssembler;
+import com.xll.frameworks.pro.system.repository.SysUserRepository;
+import com.xll.frameworks.pro.system.repository.po.SysUserPO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,4 +18,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SysUserService {
+    @Autowired
+    private SysUserRepository sysUserRepository;
+
+    public void save(SysUserDO sysUserDO) throws DomainException {
+        SysUserPO sysUserPO = SysUserDomainAssembler.INSTANCE.doToPo(sysUserDO);
+        sysUserRepository.save(sysUserPO);
+    }
 }

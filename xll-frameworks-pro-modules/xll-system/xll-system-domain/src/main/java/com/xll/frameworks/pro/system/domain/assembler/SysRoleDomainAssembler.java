@@ -8,6 +8,5 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface SysRoleDomainAssembler {
     SysRoleDomainAssembler INSTANCE = Mappers.getMapper(SysRoleDomainAssembler.class );
-
     SysRolePO doToPo(SysRoleDO sysRoleDO);
 }
