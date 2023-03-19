@@ -23,6 +23,39 @@ export default [
     ],
   },
   {
+    path: '/system',
+    name: '系统管理',
+    icon: 'crown',
+    access: 'canAdmin',
+    routes: [
+      {
+        path: '/system/user.html',
+        name: '用户管理',
+        component: './system/User',
+      },
+      {
+        path: '/system/role.html',
+        name: '权限管理',
+        component: './system/Role',
+      },
+      {
+        path: '/system/tokens.html',
+        name: 'Token管理',
+        component: './system/Token',
+      },
+      {
+        path: '/system/menus.html',
+        name: '菜单管理',
+        component: './system/Menu',
+      },
+      {
+        path: '/system/myInfo.html',
+        name: '个人信息',
+        component: './system/UserInfo',
+      },
+    ],
+  },
+  {
     path: '/welcomeT',
     name: 'welcomeT',
     icon: 'smile',
