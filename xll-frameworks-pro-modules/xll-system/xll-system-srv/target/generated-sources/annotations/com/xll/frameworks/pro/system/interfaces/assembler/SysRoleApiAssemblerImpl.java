@@ -6,7 +6,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-19T21:10:43+0800",
+    date = "2023-03-21T23:01:00+0800",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.5 (Oracle Corporation)"
 )
 public class SysRoleApiAssemblerImpl implements SysRoleApiAssembler {

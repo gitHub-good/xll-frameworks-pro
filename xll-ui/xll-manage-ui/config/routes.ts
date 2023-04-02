@@ -56,12 +56,6 @@ export default [
     ],
   },
   {
-    path: '/welcomeT',
-    name: 'welcomeT',
-    icon: 'smile',
-    component: './WelcomeT',
-  },
-  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
@@ -83,34 +77,6 @@ export default [
         component: './Admin',
       },
     ],
-  },
-  {
-    path: '/test',
-    name: '测试学习',
-    icon: 'crown',
-    access: 'canAdmin',
-    routes: [
-      {
-        path: '/test',
-        redirect: '/test/sub-page',
-      },
-      {
-        path: '/test/sub-page',
-        name: '二级目录',
-        component: './Test/index',
-      },
-      {
-        path: '/test/sub-page2',
-        name: '二级目录2',
-        component: './Test/index',
-      },
-      ],
-  },
-  {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
   },
   {
     path: '/',

@@ -49,7 +49,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
             },
           ]}
           width="md"
-          name="username"
+          name="userAccount"
           label="账号"
           placeholder="输入账号"
         />
@@ -61,7 +61,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
             },
           ]}
           width="md"
-          name="nickname"
+          name="userName"
           label="用户名"
           placeholder="输入用户名"
         />
@@ -76,21 +76,6 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           name="mobile"
           label="手机号"
           placeholder="输入手机号"
-        />
-        <ProFormRadio.Group
-          name="sex"
-          label="性别"
-          width="md"
-          options={[
-            {
-              label: '男',
-              value: 0,
-            },
-            {
-              label: '女',
-              value: 1,
-            },
-          ]}
         />
         <ProFormSelect
           mode="multiple"

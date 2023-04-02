@@ -33,11 +33,11 @@ const handleAdd = async (fields: SYSTEM.User) => {
   try {
     const result = await saveOrUpdateUser({ ...fields });
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('添加用户成功');
       return true;
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
       return false;
     }
   } catch (error) {
@@ -52,11 +52,11 @@ const handleEdit = async (fields: SYSTEM.User) => {
   try {
     const result = await saveOrUpdateUser({ ...fields });
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('修改用户成功');
       return true;
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
       return false;
     }
   } catch (error) {
@@ -69,13 +69,13 @@ const handleEdit = async (fields: SYSTEM.User) => {
 const swichUser = async (sysUser: SYSTEM.User) => {
   const hide = message.loading('正在更新');
   try {
-    const result = await updateEnabled(sysUser.id, !sysUser.enabled);
+    const result = await updateEnabled(sysUser.id, !sysUser.status);
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('修改用户成功');
       return true;
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
       return false;
     }
   } catch (error) {
@@ -90,11 +90,11 @@ const handleResetPassword = async (sysUser: SYSTEM.User) => {
   try {
     const result = await resetPassword(sysUser.id);
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('重置密码成功');
       return true;
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
       return false;
     }
   } catch (error) {
@@ -109,11 +109,11 @@ const handleDelete = async (sysUser: SYSTEM.User) => {
   try {
     const result = await deleteUser(sysUser.id);
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('删除用户成功');
       return true;
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
       return false;
     }
   } catch (error) {
@@ -130,10 +130,10 @@ const handleImport = async (file: RcFile) => {
     formData.append('file', file);
     const result = await importUser(formData);
     hide();
-    if (result.resp_code === 0) {
+    if (result.code === 200) {
       message.success('导入用户成功');
     } else {
-      message.error(result.resp_msg);
+      message.error(result.msg);
     }
   } catch (error) {
     hide();
@@ -160,20 +160,15 @@ const TableList: React.FC = () => {
     },
     {
       title: '账号',
-      dataIndex: 'username',
+      dataIndex: 'userAccount',
     },
     {
       title: '用户名',
-      dataIndex: 'nickname',
+      dataIndex: 'userName',
     },
     {
       title: '手机号',
       dataIndex: 'mobile',
-    },
-    {
-      title: '性别',
-      dataIndex: 'sex',
-      renderText: (value) => (value === 0 ? '男' : '女'),
     },
     {
       title: '创建时间',
@@ -182,12 +177,12 @@ const TableList: React.FC = () => {
     },
     {
       title: '状态',
-      dataIndex: 'enabled',
+      dataIndex: 'status',
       render: (_dom, entity) => (
         <Switch
           checkedChildren="正常"
           unCheckedChildren="锁定"
-          checked={entity.enabled}
+          checked={entity.status}
           onClick={async () => {
             const success = await swichUser(entity);
             if (success) {
@@ -214,7 +209,7 @@ const TableList: React.FC = () => {
           </Link>
           <Link onClick={async () => await handleResetPassword(entity)}>重置密码</Link>
           <Popconfirm
-            title={`确认删除用户[${entity.username}]?`}
+            title={`确认删除用户[${entity.userName}]?`}
             onConfirm={async () => {
               const success = await handleDelete(entity);
               if (success) {

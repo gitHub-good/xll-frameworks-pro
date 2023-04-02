@@ -162,7 +162,7 @@ export async function appAll() {
   const result = await request<API.Result<SYSTEM.App>>('/api-uaa/clients/all', {
     method: 'GET',
   });
-  return result.datas;
+  return result.data;
 }
 
 export async function saveOrUpdateApp(data: SYSTEM.App): Promise<API.Result<SYSTEM.App>> {

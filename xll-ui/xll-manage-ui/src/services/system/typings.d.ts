@@ -19,17 +19,14 @@ declare namespace SYSTEM {
 
   type User = {
     id?: number;
-    username?: string;
-    nickname?: string;
-    headImgUrl?: string;
-    sex?: number;
-    type?: string;
+    userName?: string;
+    userAccount?: string;
+    password?: string;
     mobile?: string;
     createTime?: Date;
-    enabled?: boolean;
-    del?: boolean;
+    status?: boolean;
     roles?: Role[];
-    roleId?: string;
+    roleId?: number;
   };
 
   type Menu = {
@@ -100,5 +97,13 @@ declare namespace SYSTEM {
     createTime?: string;
     tenantId?: string;
     updateTime?: string;
+  }
+}
+
+declare namespace API{
+  type Result<T> = {
+    code?: number;
+    msg?: String;
+    data?: T;
   }
 }
