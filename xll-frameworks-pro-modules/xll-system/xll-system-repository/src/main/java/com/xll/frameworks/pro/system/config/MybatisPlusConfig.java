@@ -28,7 +28,7 @@ public class MybatisPlusConfig {
     @Bean
     @Primary
     public SqlSessionFactory sqlSessionFactory(@Qualifier("systemDataSource") DataSource dataSource) throws Exception {
-        MybatisConfiguration configuration = new MybatisConfiguration();
+        var configuration = new MybatisConfiguration();
         configuration.setMapUnderscoreToCamelCase(false); // 数据库与bean字段名一致
         configuration.setLocalCacheScope(LocalCacheScope.STATEMENT); // 关闭一级缓存
         configuration.setCacheEnabled(false); // 关闭二级缓存
@@ -61,7 +61,7 @@ public class MybatisPlusConfig {
 
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
-        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        var interceptor = new MybatisPlusInterceptor();
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
     }
