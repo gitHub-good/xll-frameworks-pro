@@ -2,24 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>xll-frameworks-pro</artifactId>
         <groupId>com.xll.frameworks.pro</groupId>
+        <artifactId>xll-frameworks-pro-common</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xll-frameworks-pro-common</artifactId>
-    <packaging>pom</packaging>
-    <description>项目通用模块聚合</description>
-    <modules>
-        <module>xll-common-core</module>
-        <module>xll-common-pom</module>
-        <module>xll-common-cache</module>
-        <module>xll-common-data</module>
-        <module>xll-common-utils</module>
-        <module>xll-common-retry</module>
-    </modules>
+    <groupId>com.xll.frameworks.pro.common.retry</groupId>
+    <artifactId>xll-common-retry</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -27,4 +18,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>
