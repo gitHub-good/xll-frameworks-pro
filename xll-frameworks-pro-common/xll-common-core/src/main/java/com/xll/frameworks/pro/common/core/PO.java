@@ -3,7 +3,7 @@ package com.xll.frameworks.pro.common.core;
 /**
  * 功能描述: <br>
  * <P>
- * @Description 持久化model （Persistant Object - 持久化对象）
+ * @Description 持久化model （Persistence Object - 持久化对象）
  * </P>
  * @author liangliang.xu
  * @version 1.0.0
