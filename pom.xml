@@ -11,7 +11,7 @@
     <description>基础架构练习项目</description>
 
     <modules>
-        <module>xll-frameworks-pro-sweb</module>
+        <module>xll-frameworks-pro-web</module>
         <module>xll-frameworks-pro-modules</module>
         <module>xll-frameworks-pro-common</module>
     </modules>
@@ -20,9 +20,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud.version>2022.0.1</spring-cloud.version>
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC1</spring-cloud-alibaba.version>
-        <spring-boot-version>3.0.4</spring-boot-version>
+        <spring-boot-version>3.1.0</spring-boot-version>
         <swagger.core.version>1.6.2</swagger.core.version>
         <dubbo.version>3.2.0-beta.5</dubbo.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>

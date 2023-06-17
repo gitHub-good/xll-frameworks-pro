@@ -35,6 +35,11 @@
                 <groupId>com.xll.frameworks.pro.common.utils</groupId>
                 <version>${xll.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.xll.frameworks.pro</groupId>
+                <artifactId>xll-common-batch</artifactId>
+                <version>${xll.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
