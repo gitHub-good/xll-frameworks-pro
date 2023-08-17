@@ -3,7 +3,7 @@ package com.xll.frameworks.pro.web.controller.system;
 import com.xll.frameworks.pro.common.core.AjaxResult;
 import com.xll.frameworks.pro.common.core.R;
 import com.xll.frameworks.pro.system.api.RemoteSysRoleServiceClient;
-import com.xll.frameworks.pro.web.assembler.SysRoleWebAssembler;
+import com.xll.frameworks.pro.web.assembly.SysRoleWebAssembly;
 import com.xll.frameworks.pro.web.model.system.SysRoleRequestVO;
 import io.swagger.annotations.Api;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -21,7 +21,7 @@ public class SysRoleController {
     private RemoteSysRoleServiceClient remoteSysRoleServiceClient;
     @PostMapping
     public AjaxResult add(@Validated @RequestBody SysRoleRequestVO roleRequestVO) {
-        R<Boolean> save = remoteSysRoleServiceClient.save(SysRoleWebAssembler.INSTANCE.voToDto(roleRequestVO));
+        R<Boolean> save = remoteSysRoleServiceClient.save(SysRoleWebAssembly.INSTANCE.voToDto(roleRequestVO));
         if(save.getCode() == R.SUCCESS){
             return AjaxResult.success();
         }else{

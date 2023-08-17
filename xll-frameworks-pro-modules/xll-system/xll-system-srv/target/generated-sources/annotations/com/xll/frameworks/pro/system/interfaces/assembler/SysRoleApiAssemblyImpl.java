@@ -2,6 +2,8 @@ package com.xll.frameworks.pro.system.interfaces.assembler;
 
 import com.xll.frameworks.pro.system.api.dto.SysRoleDTO;
 import com.xll.frameworks.pro.system.domain.model.role.SysRoleDO;
+import com.xll.frameworks.pro.system.interfaces.assembly.SysRoleApiAssembly;
+
 import javax.annotation.processing.Generated;
 
 @Generated(
@@ -9,7 +11,7 @@ import javax.annotation.processing.Generated;
     date = "2023-04-11T21:40:51+0800",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.5 (Oracle Corporation)"
 )
-public class SysRoleApiAssemblerImpl implements SysRoleApiAssembler {
+public class SysRoleApiAssemblyImpl implements SysRoleApiAssembly {
 
     @Override
     public SysRoleDO dtoToDo(SysRoleDTO sysRoleDTO) {

@@ -4,7 +4,7 @@ import com.xll.frameworks.pro.common.core.R;
 import com.xll.frameworks.pro.system.api.RemoteSysUserServiceClient;
 import com.xll.frameworks.pro.system.api.dto.SysUserDTO;
 import com.xll.frameworks.pro.system.domain.model.user.SysUserService;
-import com.xll.frameworks.pro.system.interfaces.assembler.SysUserApiAssembler;
+import com.xll.frameworks.pro.system.interfaces.assembly.SysUserApiAssembly;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
@@ -20,7 +20,7 @@ public class RemoteSysUserServiceClientImpl implements RemoteSysUserServiceClien
     private SysUserService sysUserService;
     @Override
     public R<Boolean> save(SysUserDTO sysUserDTO) {
-        sysUserService.save(SysUserApiAssembler.INSTANCE.dtoToDo(sysUserDTO));
+        sysUserService.save(SysUserApiAssembly.INSTANCE.dtoToDo(sysUserDTO));
         return R.ok();
     }
 }

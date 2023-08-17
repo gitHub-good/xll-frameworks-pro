@@ -2,6 +2,8 @@ package com.xll.frameworks.pro.system.interfaces.assembler;
 
 import com.xll.frameworks.pro.system.api.dto.SysUserDTO;
 import com.xll.frameworks.pro.system.domain.model.user.SysUserDO;
+import com.xll.frameworks.pro.system.interfaces.assembly.SysUserApiAssembly;
+
 import javax.annotation.processing.Generated;
 
 @Generated(
@@ -9,7 +11,7 @@ import javax.annotation.processing.Generated;
     date = "2023-04-11T21:40:51+0800",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.5 (Oracle Corporation)"
 )
-public class SysUserApiAssemblerImpl implements SysUserApiAssembler {
+public class SysUserApiAssemblyImpl implements SysUserApiAssembly {
 
     @Override
     public SysUserDO dtoToDo(SysUserDTO sysUserDTO) {

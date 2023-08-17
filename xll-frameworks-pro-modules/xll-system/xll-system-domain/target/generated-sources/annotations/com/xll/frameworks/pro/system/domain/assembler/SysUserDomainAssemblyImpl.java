@@ -1,5 +1,6 @@
 package com.xll.frameworks.pro.system.domain.assembler;
 
+import com.xll.frameworks.pro.system.domain.assembly.SysUserDomainAssembly;
 import com.xll.frameworks.pro.system.domain.model.user.SysUserDO;
 import com.xll.frameworks.pro.system.repository.po.SysUserPO;
 import javax.annotation.processing.Generated;
@@ -9,7 +10,7 @@ import javax.annotation.processing.Generated;
     date = "2023-04-11T21:40:50+0800",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.5 (Oracle Corporation)"
 )
-public class SysUserDomainAssemblerImpl implements SysUserDomainAssembler {
+public class SysUserDomainAssemblyImpl implements SysUserDomainAssembly {
 
     @Override
     public SysUserPO doToPo(SysUserDO sysUserDO) {

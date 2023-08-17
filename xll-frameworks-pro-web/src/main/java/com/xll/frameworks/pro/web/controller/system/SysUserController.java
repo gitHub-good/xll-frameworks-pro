@@ -3,7 +3,7 @@ package com.xll.frameworks.pro.web.controller.system;
 import com.xll.frameworks.pro.common.core.AjaxResult;
 import com.xll.frameworks.pro.common.core.R;
 import com.xll.frameworks.pro.system.api.RemoteSysUserServiceClient;
-import com.xll.frameworks.pro.web.assembler.SysUserWebAssembler;
+import com.xll.frameworks.pro.web.assembly.SysUserWebAssembly;
 import com.xll.frameworks.pro.web.model.system.SysUserRequestVO;
 import io.swagger.annotations.Api;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -23,7 +23,7 @@ public class SysUserController {
 
     @PostMapping("/save")
     public AjaxResult save(@Validated @RequestBody SysUserRequestVO sysUserRequestVO){
-        R<Boolean> r = remoteSysUserServiceClient.save(SysUserWebAssembler.INSTANCE.voToDto(sysUserRequestVO));
+        R<Boolean> r = remoteSysUserServiceClient.save(SysUserWebAssembly.INSTANCE.voToDto(sysUserRequestVO));
         if(r.getCode() == R.SUCCESS){
             return AjaxResult.success();
         }
