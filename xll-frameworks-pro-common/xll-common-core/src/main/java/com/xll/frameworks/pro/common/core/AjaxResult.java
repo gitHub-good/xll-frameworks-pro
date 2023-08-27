@@ -1,5 +1,6 @@
 package com.xll.frameworks.pro.common.core;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -13,6 +14,7 @@ import java.util.Objects;
  * @createTime 2023/3/19 00:19
  */
 public class AjaxResult extends HashMap<String, Object> {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**
