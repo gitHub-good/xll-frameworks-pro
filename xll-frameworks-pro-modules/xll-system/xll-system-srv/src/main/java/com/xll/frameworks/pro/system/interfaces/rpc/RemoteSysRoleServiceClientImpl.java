@@ -5,7 +5,6 @@ import com.xll.frameworks.pro.common.core.exception.DomainException;
 import com.xll.frameworks.pro.system.api.RemoteSysRoleServiceClient;
 import com.xll.frameworks.pro.system.api.dto.SysRoleDTO;
 import com.xll.frameworks.pro.system.domain.model.role.SysRoleService;
-import com.xll.frameworks.pro.system.interfaces.assembler.SysRoleApiAssembler;
 import jakarta.annotation.Resource;
 import com.xll.frameworks.pro.system.interfaces.assembly.SysRoleApiAssembly;
 import org.apache.dubbo.config.annotation.DubboService;
