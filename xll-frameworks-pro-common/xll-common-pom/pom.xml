@@ -6,14 +6,14 @@
 
     <artifactId>xll-common-pom</artifactId>
     <groupId>com.xll.frameworks.pro</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <xll.version>1.0-SNAPSHOT</xll.version>
+        <xll.common.version>1.0.0-SNAPSHOT</xll.common.version>
     </properties>
 
     <dependencyManagement>
@@ -21,24 +21,34 @@
             <!--核心组件-->
             <dependency>
                 <artifactId>xll-common-core</artifactId>
-                <groupId>com.xll.frameworks.pro.common.core</groupId>
-                <version>${xll.version}</version>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <version>${xll.common.version}</version>
             </dependency>
             <!--缓存组件-->
             <dependency>
                 <artifactId>xll-common-cache</artifactId>
-                <groupId>com.xll.frameworks.pro.common.cache</groupId>
-                <version>${xll.version}</version>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <version>${xll.common.version}</version>
             </dependency>
             <dependency>
                 <artifactId>xll-common-utils</artifactId>
-                <groupId>com.xll.frameworks.pro.common.utils</groupId>
-                <version>${xll.version}</version>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <version>${xll.common.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.xll.frameworks.pro</groupId>
+                <groupId>com.xll.frameworks.pro.common</groupId>
                 <artifactId>xll-common-batch</artifactId>
-                <version>${xll.version}</version>
+                <version>${xll.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <artifactId>xll-common-data</artifactId>
+                <version>${xll.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <artifactId>xll-common-reactor</artifactId>
+                <version>${xll.common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

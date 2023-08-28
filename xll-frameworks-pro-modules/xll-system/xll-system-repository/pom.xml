@@ -5,12 +5,14 @@
     <parent>
         <artifactId>xll-frameworks-pro-modules</artifactId>
         <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.xll.frameworks.pro.system.repository</groupId>
     <artifactId>xll-system-repository</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <description>存储器</description>
 
     <properties>
@@ -21,34 +23,8 @@
 
     <dependencies>
         <dependency>
-            <artifactId>xll-common-core</artifactId>
-            <groupId>com.xll.frameworks.pro.common.core</groupId>
-        </dependency>
-        <!-- Mybatis plus依赖配置 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <!-- Druid -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- Dynamic DataSource -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- Mysql Connector -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
+            <artifactId>xll-common-data</artifactId>
+            <groupId>com.xll.frameworks.pro.common</groupId>
         </dependency>
     </dependencies>
 </project>

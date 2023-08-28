@@ -5,12 +5,13 @@
     <parent>
         <artifactId>xll-frameworks-pro-modules</artifactId>
         <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>com.xll.frameworks.pro.system.api</groupId>
     <artifactId>xll-system-api</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <description>对外的API接口</description>
 
     <properties>
@@ -22,7 +23,7 @@
     <dependencies>
         <dependency>
             <artifactId>xll-common-core</artifactId>
-            <groupId>com.xll.frameworks.pro.common.core</groupId>
+            <groupId>com.xll.frameworks.pro.common</groupId>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->

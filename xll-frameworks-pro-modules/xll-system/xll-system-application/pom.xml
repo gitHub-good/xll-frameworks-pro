@@ -6,12 +6,13 @@
     <parent>
         <groupId>com.xll.frameworks.pro</groupId>
         <artifactId>xll-frameworks-pro-modules</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <groupId>com.xll.frameworks.pro.system.application</groupId>
     <artifactId>xll-system-application</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <description>服务应用层(非核心服务) 任务定义协调领域模型</description>
 
     <properties>

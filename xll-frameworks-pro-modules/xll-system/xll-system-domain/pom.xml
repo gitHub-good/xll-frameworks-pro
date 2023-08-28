@@ -6,12 +6,13 @@
     <parent>
         <groupId>com.xll.frameworks.pro</groupId>
         <artifactId>xll-frameworks-pro-modules</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <groupId>com.xll.frameworks.pro.system.domain</groupId>
     <artifactId>xll-system-domain</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <description>核心领域服务</description>
 
     <properties>

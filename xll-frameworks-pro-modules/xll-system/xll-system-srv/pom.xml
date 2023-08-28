@@ -5,12 +5,14 @@
     <parent>
         <artifactId>xll-frameworks-pro-modules</artifactId>
         <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.xll.frameworks.pro.srv</groupId>
     <artifactId>xll-system-srv</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <description>系统服务入口</description>
     <packaging>jar</packaging>
 
@@ -50,9 +52,9 @@
         </dependency>
         <!-- api层 -->
         <dependency>
-            <groupId>com.xll.frameworks.pro</groupId>
+            <groupId>com.xll.frameworks.pro.system.api</groupId>
             <artifactId>xll-system-api</artifactId>
-            <version>${parent.version}</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

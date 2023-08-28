@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>xll-frameworks-pro-common</artifactId>
-        <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.xll.frameworks.pro.common</groupId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,51 +15,36 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- 数据库驱动 -->
-        <mysql-connector-java.version>8.0.32</mysql-connector-java.version>
-
-        <!-- 持久层 -->
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
-        <dynamic-datasource-spring-boot-starter.version>3.6.1</dynamic-datasource-spring-boot-starter.version>
-        <druid.version>1.2.16</druid.version>
     </properties>
 
     <dependencies>
-        <!-- freemarker -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <artifactId>xll-common-core</artifactId>
+            <groupId>com.xll.frameworks.pro.common</groupId>
         </dependency>
-
-        <!-- mybatis-plus -->
+        <!-- Mybatis plus依赖配置 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus.version}</version>
+            <version>${spring-boot.mybatis}</version>
         </dependency>
-
-        <!-- druid -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${spring-boot.mybatis}</version>
+            <!--                <scope>compile</scope>-->
+        </dependency>
+        <!-- Druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.version}</version>
         </dependency>
-
-        <!-- 动态数据源 -->
+        <!-- Dynamic DataSource -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-            <version>${dynamic-datasource-spring-boot-starter.version}</version>
-        </dependency>
-
-        <!-- 数据库驱动 -->
-        <!--mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-            <scope>runtime</scope>
+            <version>${dynamic-ds.version}</version>
         </dependency>
     </dependencies>
 

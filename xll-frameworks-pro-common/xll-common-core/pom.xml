@@ -4,13 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>xll-frameworks-pro-common</artifactId>
-        <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.xll.frameworks.pro.common</groupId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>xll-common-core</artifactId>
-    <groupId>com.xll.frameworks.pro.common.core</groupId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

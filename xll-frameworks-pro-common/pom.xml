@@ -5,11 +5,13 @@
     <parent>
         <artifactId>xll-frameworks-pro</artifactId>
         <groupId>com.xll.frameworks.pro</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.xll.frameworks.pro.common</groupId>
     <artifactId>xll-frameworks-pro-common</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>项目通用模块聚合</description>
     <modules>
@@ -20,12 +22,18 @@
         <module>xll-common-utils</module>
         <module>xll-common-retry</module>
         <module>xll-common-batch</module>
+        <module>xll-common-reactor</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- 工具类依赖版本管理 -->
+        <hutool.version>5.8.21</hutool.version>
+        <fastjson2.version>2.0.25</fastjson2.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
 </project>
