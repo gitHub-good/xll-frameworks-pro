@@ -11,7 +11,7 @@
 
     <groupId>com.xll.frameworks.pro.common</groupId>
     <artifactId>xll-frameworks-pro-common</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${parent.version}</version>
     <packaging>pom</packaging>
     <description>项目通用模块聚合</description>
     <modules>
