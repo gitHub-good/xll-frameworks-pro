@@ -23,6 +23,8 @@
         <module>xll-common-retry</module>
         <module>xll-common-batch</module>
         <module>xll-common-reactor</module>
+        <module>xll-common-metrics</module>
+        <module>xll-common-skywalking</module>
     </modules>
 
     <properties>
