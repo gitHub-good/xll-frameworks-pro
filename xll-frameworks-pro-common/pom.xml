@@ -25,6 +25,7 @@
         <module>xll-common-reactor</module>
         <module>xll-common-metrics</module>
         <module>xll-common-skywalking</module>
+        <module>xll-common-design</module>
     </modules>
 
     <properties>
