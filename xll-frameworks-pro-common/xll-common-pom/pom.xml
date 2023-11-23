@@ -64,7 +64,12 @@
             <dependency>
                 <groupId>com.xll.frameworks.pro.common</groupId>
                 <artifactId>xll-common-metrics</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${xll.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xll.frameworks.pro.common</groupId>
+                <artifactId>xll-common-design</artifactId>
+                <version>${xll.common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
