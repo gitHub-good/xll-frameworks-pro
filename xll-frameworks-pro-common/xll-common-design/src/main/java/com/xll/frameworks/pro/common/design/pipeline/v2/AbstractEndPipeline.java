@@ -21,6 +21,12 @@ public abstract class AbstractEndPipeline<T> extends AbstractPipeline<T> {
     }
 
     @Override
+    public void process(PipelineContext ctx, T inputArgs) {
+        //处理当前流水线节点 结束节点不向下流转
+        this.doProcess(ctx, inputArgs);
+    }
+
+    @Override
     public final void forward(PipelineContext ctx, T t) {
         log.error("结束管道 不支持转发");
         throw new UnsupportedOperationException("结束管道 不支持转发");

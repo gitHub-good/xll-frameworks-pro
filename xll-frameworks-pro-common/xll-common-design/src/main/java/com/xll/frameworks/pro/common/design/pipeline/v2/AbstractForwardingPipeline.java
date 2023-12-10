@@ -13,10 +13,19 @@ import lombok.NonNull;
  */
 public abstract class AbstractForwardingPipeline<T> extends AbstractPipeline<T> {
 
-
     protected AbstractForwardingPipeline(@NonNull String name, @NonNull Pipeline<? super T> next) {
        super(name, next);
     }
+
+    @Override
+    public void process(PipelineContext ctx, T inputArgs) {
+        //处理当前流水线节点
+        this.doProcess(ctx, inputArgs);
+        //执行下一个流水线节点
+        this.forward(ctx, inputArgs);
+    }
+
+
 
     @Override
     public void forward(PipelineContext ctx, T t) {

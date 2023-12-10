@@ -1,5 +1,7 @@
-package com.xll.frameworks.pro.common.design.pipeline.v2;
+package com.xll.frameworks.pro.common.design.test.pipeline.v2;
 
+import com.xll.frameworks.pro.common.design.pipeline.v2.AbstractEndPipeline;
+import com.xll.frameworks.pro.common.design.pipeline.v2.PipelineContext;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -19,7 +21,7 @@ public final class DefaultEndPipeline extends AbstractEndPipeline<String> {
     }
 
     @Override
-    public void process(PipelineContext ctx, String inputArgs) {
+    public void doProcess(PipelineContext ctx, String inputArgs) {
         log.info("DefaultEndPipeline.process actionName {} inputArgs {}", ctx.getActionName(), inputArgs + getName());
     }
 }

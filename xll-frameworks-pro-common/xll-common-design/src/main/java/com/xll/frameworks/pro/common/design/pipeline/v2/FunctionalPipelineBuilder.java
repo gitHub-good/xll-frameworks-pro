@@ -10,7 +10,7 @@ import java.util.function.Function;
  * @since 2023/12/10 18:18
  * @version 1.0.0
  */
-public final class FunctionalPipelineBuilder<T, P extends Pipeline<T>> {
+public final class FunctionalPipelineBuilder<T, P extends Pipeline<T>> implements PipelineBuilder {
 
     private final Function<Pipeline<? super T>, P> factory;
 

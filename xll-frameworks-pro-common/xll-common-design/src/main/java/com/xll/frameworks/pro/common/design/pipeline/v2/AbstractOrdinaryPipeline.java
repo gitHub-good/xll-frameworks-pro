@@ -17,9 +17,13 @@ public abstract class AbstractOrdinaryPipeline<T> extends AbstractPipeline<T> {
         super(name);
     }
 
+
     @Override
-    public void setNext(Pipeline<? super T> next) {
-        super.setNext(next);
+    public void process(PipelineContext ctx, T inputArgs) {
+        //处理当前流水线节点
+        this.doProcess(ctx, inputArgs);
+        //执行下一个流水线节点
+        this.forward(ctx, inputArgs);
     }
 
     @Override

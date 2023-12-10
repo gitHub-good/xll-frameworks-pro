@@ -38,8 +38,8 @@ class PipelineTest {
         }
 
         @Override
-        public void process(PipelineContext ctx, String inputArgs) {
-            log.info("DemoPipelineAbstract.process inputArgs {}", inputArgs);
+        public void doProcess(PipelineContext ctx, String inputArgs) {
+            log.info("DemoPipelineAbstract.process inputArgs {}", inputArgs + getName());
         }
     }
 

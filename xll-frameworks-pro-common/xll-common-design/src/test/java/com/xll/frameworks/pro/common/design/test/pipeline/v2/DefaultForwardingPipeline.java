@@ -1,5 +1,8 @@
-package com.xll.frameworks.pro.common.design.pipeline.v2;
+package com.xll.frameworks.pro.common.design.test.pipeline.v2;
 
+import com.xll.frameworks.pro.common.design.pipeline.v2.AbstractForwardingPipeline;
+import com.xll.frameworks.pro.common.design.pipeline.v2.Pipeline;
+import com.xll.frameworks.pro.common.design.pipeline.v2.PipelineContext;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,8 +23,7 @@ public final class DefaultForwardingPipeline extends AbstractForwardingPipeline<
     }
 
     @Override
-    public void process(PipelineContext ctx, String inputArgs) {
+    protected void doProcess(PipelineContext ctx, String inputArgs) {
         log.info("DefaultForwardingPipeline.process inputArgs {}", inputArgs + getName());
-        super.forward(ctx, inputArgs);
     }
 }

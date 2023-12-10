@@ -30,6 +30,13 @@ public abstract class AbstractPipeline<T> implements Pipeline<T> {
         this.next = next;
     }
 
+    /**
+     * 处理当前流水线节点
+     * @param ctx 上下文
+     * @param inputArgs 入参数
+     */
+    protected abstract void doProcess(PipelineContext ctx, T inputArgs);
+
     public void setNext(Pipeline<? super T> next) {
         this.next = next;
     }

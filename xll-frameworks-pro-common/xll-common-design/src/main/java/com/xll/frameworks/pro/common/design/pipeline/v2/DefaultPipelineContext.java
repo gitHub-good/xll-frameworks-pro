@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DefaultPipelineContext implements PipelineContext{
 
     /**
-     * 业务管道功能描述
+     * 业务管道组合功能描述
      */
     private final String actionName;
 

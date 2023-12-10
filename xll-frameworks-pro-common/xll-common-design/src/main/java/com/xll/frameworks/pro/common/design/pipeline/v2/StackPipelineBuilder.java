@@ -15,7 +15,7 @@ import java.util.function.Function;
  * @since 2023/12/10 18:34
  * @version 1.0.0
  */
-public final class StackPipelineBuilder<T> {
+public final class StackPipelineBuilder<T> implements PipelineBuilder {
 
     private final Deque<Function<Pipeline<? super T>, ? extends Pipeline<T>>> stack = new ArrayDeque<>();
 
