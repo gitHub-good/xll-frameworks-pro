@@ -26,6 +26,7 @@
         <module>xll-common-metrics</module>
         <module>xll-common-skywalking</module>
         <module>xll-common-design</module>
+        <module>xll-common-ddd-dsl</module>
     </modules>
 
     <properties>

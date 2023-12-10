@@ -9,7 +9,8 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xll-common-design</artifactId>
+    <artifactId>xll-common-ddd-dsl</artifactId>
+    <description>领域专用语言模型</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,10 +18,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.xll.frameworks.pro.common</groupId>
-            <artifactId>xll-common-utils</artifactId>
-        </dependency>
-    </dependencies>
 </project>

@@ -1,6 +1,6 @@
-package com.xll.frameworks.pro.common.design.test.pipeline;
+package com.xll.frameworks.pro.common.design.test.pipeline.v1;
 
-import com.xll.frameworks.pro.common.design.pipeline.Pipeline;
+import com.xll.frameworks.pro.common.design.pipeline.v1.Pipeline;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.StringUtils;
 

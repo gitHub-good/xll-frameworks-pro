@@ -1,4 +1,4 @@
-package com.xll.frameworks.pro.common.design.pipeline;
+package com.xll.frameworks.pro.common.design.pipeline.v1;
 /**
  * 功能描述: <br>
  * <p>
