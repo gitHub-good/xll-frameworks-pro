@@ -22,5 +22,15 @@
             <groupId>com.xll.frameworks.pro.common</groupId>
             <artifactId>xll-common-utils</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>6.1.0</version>
+        </dependency>
     </dependencies>
 </project>
