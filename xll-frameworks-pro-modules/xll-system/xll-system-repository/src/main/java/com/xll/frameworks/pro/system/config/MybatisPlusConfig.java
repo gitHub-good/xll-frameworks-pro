@@ -29,9 +29,12 @@ public class MybatisPlusConfig {
     @Primary
     public SqlSessionFactory sqlSessionFactory(@Qualifier("systemDataSource") DataSource dataSource) throws Exception {
         var configuration = new MybatisConfiguration();
-        configuration.setMapUnderscoreToCamelCase(false); // 数据库与bean字段名一致
-        configuration.setLocalCacheScope(LocalCacheScope.STATEMENT); // 关闭一级缓存
-        configuration.setCacheEnabled(false); // 关闭二级缓存
+        // 数据库与bean字段名一致
+        configuration.setMapUnderscoreToCamelCase(false);
+        // 关闭一级缓存
+        configuration.setLocalCacheScope(LocalCacheScope.STATEMENT);
+        // 关闭二级缓存
+        configuration.setCacheEnabled(false);
         configuration.setLogImpl(StdOutImpl.class);
 
         var factoryBean = new MybatisSqlSessionFactoryBean();
