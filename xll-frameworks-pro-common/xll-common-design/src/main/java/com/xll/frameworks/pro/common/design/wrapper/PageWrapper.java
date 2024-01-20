@@ -15,24 +15,24 @@ import java.util.List;
  * @version 1.0.0
  */
 @Setter
-public class PageWrapper extends AbstractWrapper{
-    private final int maxPageNum;
-    private final int maxPageSize;
+public non-sealed class PageWrapper extends AbstractWrapper{
+    private final int pageNum;
+    private final int pageSize;
 
     /**
      * 初始化
      *
-     * @param maxPageNum 页码
-     * @param maxPageSize 每页数量
+     * @param pageNum 页码
+     * @param pageSize 每页数量
      */
-    public PageWrapper(int maxPageNum, int maxPageSize) {
-        this.maxPageNum = maxPageNum;
-        this.maxPageSize = maxPageSize;
+    public PageWrapper(int pageNum, int pageSize) {
+        this.pageNum = pageNum;
+        this.pageSize = pageSize;
     }
 
     @Override
     public <T> List<T> wrap(Query<T> query) {
-        try(Page<T> page = PageMethod.startPage(maxPageNum, maxPageSize).doSelectPage(query::doQuery)){
+        try(Page<T> page = PageMethod.startPage(pageNum, pageSize).doSelectPage(query::doQuery)){
             return page.getResult();
         }
     }

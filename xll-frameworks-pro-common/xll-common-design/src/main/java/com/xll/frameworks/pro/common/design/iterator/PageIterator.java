@@ -26,8 +26,8 @@ public class PageIterator<E> extends AbstractCommonIterator<List<E>> {
 
     @Override
     public boolean hasNext() {
-        List<E> wrap = pageWrapper.wrap(query);
-        return !CollectionUtils.isEmpty(wrap);
+        dataList = pageWrapper.wrap(query);
+        return !CollectionUtils.isEmpty(dataList);
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.function.Supplier;
  * @since 2024/1/14 18:01
  * @version 1.0.0
  */
-public abstract class AbstractWrapper implements CommonWrapper{
+public abstract sealed class AbstractWrapper implements CommonWrapper permits TransactionalWrapper, PageWrapper{
 
     @Override
     public <T> T wrap(Function<Object[], T> function, Object... params) {

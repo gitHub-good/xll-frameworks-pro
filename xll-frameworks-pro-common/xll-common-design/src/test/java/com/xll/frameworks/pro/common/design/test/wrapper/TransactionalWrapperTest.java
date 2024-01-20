@@ -1,7 +1,10 @@
 package com.xll.frameworks.pro.common.design.test.wrapper;
 
-import com.xll.frameworks.pro.common.design.wrapper.TransactionalWrapper;
+import com.xll.frameworks.pro.common.design.iterator.PageIterator;
+import com.xll.frameworks.pro.common.design.wrapper.PageWrapper;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 /**
  * 功能描述: <br>
@@ -16,9 +19,10 @@ public class TransactionalWrapperTest {
 
     @Test
     public void test() {
-        TransactionalWrapper.getInstance().wrap((params) -> {
-            System.out.println("1");
-            throw new RuntimeException("1");
-        });
+        var pageIterator = new PageIterator<>(new PageWrapper(1, 10),
+                ()-> List.of("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"));
+        while (pageIterator.hasNext()){
+            System.out.println(pageIterator.next());
+        }
     }
 }

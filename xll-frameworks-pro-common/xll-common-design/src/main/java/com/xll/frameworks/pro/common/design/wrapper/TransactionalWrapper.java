@@ -1,5 +1,6 @@
 package com.xll.frameworks.pro.common.design.wrapper;
 
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,8 +17,10 @@ import java.util.function.Supplier;
  * @since 2024/1/14 17:55
  * @version 1.0.0
  */
+@NoArgsConstructor
 @Component
-public class TransactionalWrapper extends AbstractWrapper {
+public non-sealed class TransactionalWrapper extends AbstractWrapper {
+
 
     private static final TransactionalWrapper INSTANCE = new TransactionalWrapper();
 
